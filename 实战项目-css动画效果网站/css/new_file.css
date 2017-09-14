@@ -1,0 +1,1120 @@
+/*---------------------基本格式开始---------------------*/
+@import url("font-awesome/css/font-awesome.min.css");
+@import url("nova/nova.css");
+
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+img, video {
+	max-width: 100%;
+    height: auto;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textarea {
+	margin:0;
+	padding:0;
+}
+p {
+	margin: 0 0 3rem 0;
+}
+h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
+    font-family: "roboto-black", sans-serif;
+    color: #001835;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    margin-bottom: 2.1rem;
+}
+h3, .h03 {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+ul {
+	list-style:none;
+}
+img,a img {
+	border:none;
+}
+a {
+	text-decoration:none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+body {
+    background: #0e0e0e;
+    font-family: "roboto-regular", sans-serif;
+    font-size: 1.6rem;
+    line-height: 3.0rem;
+    color: #292c35;
+    text-rendering: optimizeLegibility;
+    word-wrap: break-word;
+}
+
+.button, a.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+    display: inline-block;
+    font-family: "roboto-black", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    height: 5.4rem;
+    line-height: 5.4rem;
+    padding: 0 3rem;
+    margin: 0 .3rem 1.2rem 0;
+    background: #d8d8d8;
+    color: #001835;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+    display: block;
+    height: 6rem;
+    padding: 1.5rem 2.5rem;
+    border: 0;
+    outline: none;
+    vertical-align: middle;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: "roboto-regular", sans-serif;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+/*---------------------基本格式结束---------------------*/
+
+
+
+/*---------------------头部开始---------------------*/
+.main-header {
+	width: 100%;
+    height: 72px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 700;
+    background: transparent;
+}
+header .logo {
+    position: absolute;
+    left: 26px;
+    top: 30px;
+    display: block;
+}
+header .logo a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    width: 96px;
+    height: 20px;
+    background: url(../img/logo.png) no-repeat center;
+    background-size: 96px 20px;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+header .menu-toggle {
+	width: 42px;
+    height: 42px;
+    display: block;
+    outline: 0;
+    background: #111111;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: all 0.4s ease-in-out;
+}
+.menu-is-open .menu-toggle {
+	transform: translateX(-240px);
+}
+
+header .menu-toggle span {
+	display: block;
+    background-color: #FFFFFF;
+    width: 24px;
+    height: 3px;
+    margin-top: -1.5px;
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    color: transparent;
+    font: 0/0 a;
+    transition: all 0.3s ease-in-out;
+}
+
+header .menu-toggle span:before {
+	top:-8px;
+	transition: all 0.3s ease-in-out;
+}
+header .menu-toggle span:after {
+	top:8px;
+	transition: all 0.3s ease-in-out;
+}
+header .menu-toggle span:before,header .menu-toggle span:after{
+	content: '';
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    left: 0;
+}
+header .menu-toggle.isclicked span:before {
+	top: 0px;
+	transform: rotate(45deg);
+	background-color: white;
+}
+header .menu-toggle.isclicked span {
+	background-color: rgba(255, 255, 255, 0);
+}
+header .menu-toggle.isclicked span:after {
+	top: 0px;
+	transform: rotate(-45deg);
+	background-color: white;
+}
+/*---------------------头部结束---------------------*/
+
+/*---------------------导航开始---------------------*/
+#menu-nav-wrap {
+	background: #111111;
+    color: rgba(255, 255, 255, 0.25);
+    font-family: "roboto-regular", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    padding: 3.6rem 3rem;
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 800;
+    overflow-y: auto;
+    font-weight: 300;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out ;
+    transform: translateX(100%);
+    transition: all 0.4s ease-in-out;
+}
+.menu-is-open #menu-nav-wrap {
+	visibility: visible;
+	transform: translateX(0);
+}
+.smoothscroll {
+	cursor: pointer;
+}
+#menu-nav-wrap h3 {
+	color: white;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+#menu-nav-wrap .nav-list {
+    margin: 1.8rem 0 1.5rem 0;
+    padding: 0 0 1.5rem 0;
+    list-style: none;
+    line-height: 3.6rem;
+}
+#menu-nav-wrap .nav-list li a {
+    color: rgba(255, 255, 255, 0.25);
+    transition: all 0.5s;
+}
+#menu-nav-wrap .nav-list li a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#menu-nav-wrap a {
+    color: rgba(255, 255, 255, 0.5);
+}
+#menu-nav-wrap .button {
+    margin: 0 0 1.2rem 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    color: rgba(255, 255, 255, 0.5) !important;
+    background: rgba(255, 255, 255, 0.1);
+}
+/*---------------------导航结束---------------------*/
+
+
+/*---------------------intro部分开始---------------------*/
+#intro {
+	position: relative;
+    background-image: url(../img/intro-bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    padding-top: 15.6rem;
+    overflow: hidden;
+}
+.row {
+    width: 94%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.col-twelve, .col-full {
+    width: 100%;
+    padding: 0 20px;
+}
+#intro h3 {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: .6rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);  
+    transform: translateY(80%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+}
+#intro h3.fadeInUp {
+	visibility: visible;
+	transform: translateY(0%);
+	opacity: 1;
+}
+#intro h1 {
+    font-family: "domine-bold", serif;
+    font-size: 5.3rem;
+    line-height: 1.267;
+    color: #ed254d;
+    padding: 0 12%;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    transform: translateY(80%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+ }
+ #intro h1.fadeInUp {
+	visibility: visible;
+	transform: translateY(0%);
+	opacity: 1;
+}
+ #intro .buttons {
+    margin-bottom: 4.2rem;
+}
+ #intro .buttons .button {
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    margin: 0 .9rem;
+    background: transparent;
+    line-height: 4.8rem;
+    visibility: hidden;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 1s;
+}
+ #intro .buttons .button.fadeInUp {
+ 	visibility: visible;
+ 	transform: translateX(0);
+	opacity: 1;
+ }
+  #intro .buttons .button:hover {
+ 	border: 3px solid #f9da4f;
+    color: #f9da4f;
+ }
+#intro img {
+    vertical-align: bottom;
+    max-width: 840px;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(80%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+}
+#intro img.fadeInUp {
+	visibility: visible;
+	transform: translateY(0%);
+	opacity: 1.5;
+}
+/*---------------------intro部分结束---------------------*/
+
+
+
+/*---------------------feature部分开始---------------------*/
+#feature {
+	padding: 15rem 0 12rem;
+    background-color: #f9da4f;
+    overflow: hidden;
+}
+.w840 {
+	max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.w840:before,.w840:after{
+	content: ' ';
+	display: table;
+    clear: both;
+}
+.w840 h2 {
+    font-family: "domine-bold", serif;
+    font-size: 4.8rem;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+}
+#feature-title {
+	position: relative;
+    margin-bottom: 4.2rem;
+    padding-bottom: 1.5rem;
+}
+#feature-title:after {
+	display: block;
+    background-color: #001835;
+    width: 120px;
+    height: 3px;
+    content: '\0020';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -60px;
+}
+p.lead {
+	font-family: "roboto-light", sans-serif;
+    font-size: 2.1rem;
+    line-height: 1.714;
+    color: #4a5060;
+    margin-bottom:3rem ;
+}
+.features-wrap {
+	margin-top: 1.5rem;
+    max-width: 1170px;
+}
+.feature-block:before,.feature-block:after {
+	content: ' ';
+	display: table;
+    clear: both;
+}
+
+.features_list {
+	padding: 0 30px 1.5rem 30px;
+	width: 33.33333%;
+	float: left;
+}
+#num {
+	display: block;
+    color: #ed254d;
+    font-family: "roboto-bold", serif;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 2.4rem;
+}
+
+#infos {
+    background: #FFFFFF;
+    overflow-x: hidden;
+}
+.info-entry {
+    position: relative;
+}
+.info-entry .half-grey {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background: rgba(63, 80, 96, 0.15);
+}
+.info-entry .half-grey#half-grey2 {
+	left: 0;
+}
+.info-entry-content {
+	position: relative;
+	padding-top: 13.2rem;
+    padding-bottom: 10.8rem;
+    width: 94%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.info-entry-content:before,.info-entry-content:after{
+	content: "";
+    display: table;
+    clear: both;
+}
+
+.media-wrap {
+	left: 50%;
+    padding-left: 0;
+    padding-right: 20px;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.media-wrap#media-wrap2 {
+	left: 0;
+	padding-left: 20px;
+    padding-right: 0px;
+}
+.info-entry-content h5 {
+    color: rgba(0, 24, 53, 0.4);
+    margin-bottom: .6rem;
+    margin-left: .2rem;
+    font-family: "roboto-medium", sans-serif;
+    font-size: 1.5rem;
+}
+.info-entry-content h2 {
+    font-family: "domine-bold", serif;
+    font-size: 3.7rem;
+    line-height: 1.216;
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+.info-entry-content p {
+	margin-bottom: 3rem;
+}
+.text-part {
+	padding-left: 20px;
+    padding-right: 70px;
+    width: 50%;
+    float: left;
+}
+.text-part#text-part2 {
+	padding-left: 70px;
+    padding-right: 20px;
+    float: right;
+}
+.text-part .button {
+	display: inline-block;
+    font-family: "roboto-black", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    height: 5.4rem;
+    line-height: 5.4rem;
+    padding: 0 3rem;
+    margin: 0 .3rem 1.2rem 0;
+    background: #d8d8d8;
+    color: #001835;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+.text-part .button:hover {
+	background: #bebebe;
+    color: #000000;
+    outline: 0;
+}
+/*---------------------feature部分结束---------------------*/
+
+
+/*---------------------stats部分开始---------------------*/
+#stats {
+    background: #001835;
+    padding-top: 7.2rem;
+    padding-bottom: 4.8rem;
+    text-align: center;
+}
+#stats .row {
+    max-width: 1440px;
+}
+#stats .stat {
+    min-height: 17.4rem;
+    padding-bottom: 1.5rem;
+    float: left;
+   	padding: 0 20px;
+   	width: 16.66667%;
+}
+#stats .stats-list:before,#stats .stats-list:after {
+	content: "";
+    display: table;
+    clear: both;
+}
+#stats .icon-part {
+    position: relative;
+    padding-bottom: 2.1rem;
+}
+.icon-part:after {
+	content: "";
+    display: block;
+    width: 80px;
+    height: 1px;
+    background: rgba(249, 218, 79, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -40px;
+}
+#stats .icon-part i {
+    font-size: 6rem;
+    color: #f9da4f;
+}
+#stats .stat-count {
+    font-size: 3.6rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+    color: white;
+}
+#stats .stat-title {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.4rem;
+    line-height: 1.714;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    font-family: "roboto-bold";
+    margin-bottom: 1.2rem;
+}
+/*---------------------stats部分结束---------------------*/
+
+
+
+/*---------------------pricing部分开始---------------------*/
+#pricing {
+    background: #e2e5e7;
+    padding-top: 12rem;
+    padding-bottom: 9.6rem;
+}
+.section-intro {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+}
+.group:before,.group:after {
+	content: "";
+    display: table;
+    clear: both;
+}
+.section-intro:before,.section-intro:after {
+	content: "";
+    display: table;
+}
+.section-intro:after {
+	display: block;
+    background-color: #001835;
+    width: 120px;
+    height: 3px;
+    content: '\0020';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -60px;
+}
+.section-intro .with-bottom-line {
+    position: relative;
+    margin-bottom: 4.2rem;
+    padding-bottom: 1.5rem;
+}
+.section-intro h2 {
+    font-family: "domine-bold", serif;
+    font-size: 4.8rem;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+}
+.pricing-content .bgrid {
+    margin-bottom: 3.9rem;
+    padding: 0 20px;
+    width: 33.33333%;
+    float: left;
+}
+.pricing-content .price-block {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 6rem 0 4.8rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.pricing-content .primary {
+    background: #002f68;
+    color: #FFFFFF;
+}
+.pricing-content .price-block .plan-title {
+    padding-bottom: 2.4rem;
+    font-size: 2.4rem;
+    font-family: "roboto-bold";
+    position: relative;
+}
+.pricing-content .primary .plan-title {
+    color: #FFFFFF;
+}
+.pricing-content .price-block .plan-title::after {
+    display: block;
+    background-color: rgba(0, 24, 53, 0.3);
+    width: 80px;
+    height: 3px;
+    content: '\0020';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -40px;
+}
+.pricing-content .primary .plan-title::after {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.pricing-content .price-block .plan-price {
+    font-family: "domine-bold", serif;
+    color: #001835;
+    font-size: 6.5rem;
+    line-height: 1;
+    margin-top: 4.2rem;
+    margin-bottom: 0;
+}
+.pricing-content .primary .plan-price {
+    color: #FFFFFF;
+}
+
+.pricing-content .price-block .plan-price sup {
+    font-family: "roboto-black", sans-serif;
+    font-size: 2.4rem;
+    top: -3rem;
+    margin-right: 3px;
+}
+.pricing-content .price-block .price-month {
+    margin-bottom: 1.2rem;
+    font-family: "roboto-regular", sans-serif;
+    font-size: 1.8rem;
+    color: #3f4452;
+}
+.pricing-content .primary .price-month {
+    color: rgba(255, 255, 255, 0.5);
+}
+.pricing-content .price-block .bottom-part {
+    padding-top: 2.4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.pricing-content .price-block .features {
+    list-style: none;
+    font-family: "roboto-regular", sans-serif;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0 0 4.2rem 0;
+}
+.pricing-content .primary .features {
+    color: rgba(255, 255, 255, 0.6);
+}
+.pricing-content .price-block .features li {
+    padding: .6rem 0;
+    border-bottom: 1px solid rgba(63, 80, 96, 0.15);
+}
+.pricing-content .primary .features li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) ;
+}
+
+.pricing-content .price-block .features li strong {
+    color: #001835;
+    font-family: "roboto-black", serif;
+    color: #001835;
+    margin-right: 5px;
+}
+.pricing-content .primary .features li strong {
+    color: #FFFFFF;
+}
+.pricing-content .price-block .button {
+    background: #002f68;
+    color: #FFFFFF;
+    padding: 0 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pricing-content .price-block .button:hover {
+	background: #001835;
+}
+.pricing-content .primary .button {
+    background: #FFFFFF;
+    color: #001835;
+}
+.pricing-content .primary .button:hover {
+	color: #FFFFFF;
+	background: #001835;
+}
+
+button.large, .button.large {
+    height: 6rem !important;
+    line-height: 6rem !important;
+    padding: 0rem 3rem !important;
+}
+/*---------------------pricing部分结束---------------------*/
+
+
+
+
+
+/*---------------------testimonials部分开始---------------------*/
+#testimonials {
+    padding: 12rem 0 10.2rem;
+    background: #FFFFFF;
+    text-align: center;
+}
+#testimonials h2 {
+    margin-bottom: 3.6rem;
+    padding-bottom: 3.6rem;
+    position: relative;
+    font-size: 3.1rem;
+    line-height: 1.355;
+    letter-spacing: -.1rem;
+}
+#testimonials h2:after {
+	display: block;
+    background-color: rgba(0, 24, 53, 0.4);
+    width: 120px;
+    height: 3px;
+    content: '\0020';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -60px;
+}
+#testimonials .slides {
+	position: relative;
+}
+#testimonials .slide-li {
+	width: 100%;
+    position: absolute;
+    opacity: 1;
+    display: block;
+    transition: all 0.8s;
+}
+#testimonials .slides li p {
+    font-family: "domine-regular", serif;
+    font-size: 3rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+#testimonials .slides li .author-info {
+    font-size: 1.6rem;
+    font-family: "roboto-black", sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+#testimonials .flexslider {
+	transition: all 0.8s;
+}
+#testimonials .flexslider-controls {
+	position: relative;
+    margin-top: 3rem;
+    z-index: 800;
+}
+#testimonials .flexslider-controls .flex-control-nav li {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    padding-left: 0;
+}
+#testimonials .flexslider-controls .flex-control-nav li img {
+    cursor: pointer;
+    width: 60px;
+    opacity: .3;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+#testimonials .flexslider-controls .flex-control-nav li img:hover {
+	opacity:1;
+}
+#testimonials .flexslider-controls .flex-control-nav li.flex-active img {
+	opacity:1;
+}
+/*---------------------testimonials部分结束---------------------*/
+
+
+/*---------------------#download部分开始---------------------*/
+#download {
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    padding: 13.2rem 0 10.2rem;
+}
+#download .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #001835;
+    opacity: .85;
+}
+#download .download-content {
+    position: relative;
+    max-width: 780px;
+}
+#download h2 {
+    font-family: "domine-bold", serif;
+    font-size: 4.8rem;
+    line-height: 1.25;
+    margin-bottom: 1.8rem;
+    color: white;
+}
+#download .lead {
+    color: rgba(255, 255, 255, 0.6);
+}
+#download .button {
+    background: #FFFFFF;
+    color: #001835;
+    margin: .6rem 0 1.5rem 0;
+}
+
+/*---------------------#download部分结束---------------------*/
+
+
+/*---------------------#subscribe部分开始---------------------*/
+#subscribe {
+    background: #00132b;
+    padding: 10.2rem 0 6rem;
+    text-align: center;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+#subscribe .subscribe-content {
+    max-width: 780px;
+}
+#subscribe h2 {
+    color: white;
+    font-size: 3.1rem;
+    line-height: 1.355;
+    letter-spacing: -.1rem;
+}
+#subscribe #mc-form {
+    margin-top: 4.2rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+.row .row {
+    width: auto;
+    max-width: none;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+#subscribe .left {
+    padding-right: 0;
+    width: 66.66667%;
+    float: left;
+}
+#subscribe #mc-form input[type="email"] {
+    width: 100%;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.3);
+    margin-bottom: 3rem;
+}
+#subscribe .right {
+    padding-left: 0;
+    width: 33.33333%;
+    padding: 0 20px 0 0;
+    float: right;
+}
+#subscribe #mc-form .button {
+    margin: 0;
+    width: 100%;
+    background: #FFFFFF;
+}
+#subscribe #mc-form .button:hover {
+    background: #f9da4f;
+}
+.row:before, .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*---------------------#subscribe部分结束---------------------*/
+
+/*---------------------footer部分开始---------------------*/
+footer {
+    text-align: center;
+    padding-bottom: 3rem;
+    position: relative;
+}
+.footer-social-wrap {
+    background: #111;
+}
+.footer-social-list {
+    list-style: none;
+    display: block;
+    margin: 0;
+}
+.footer-social-list li {
+    display: inline-block;
+    padding-left: 0;
+}
+.footer-social-list li:first-child a {
+    border-left: 1px solid rgba(255, 255, 255, 0.02);
+}
+.footer-social-list li a {
+    font-size: 4.2rem;
+    line-height: 4.2rem;
+    color: #FFFFFF;
+    display: block;
+    padding: 4.2rem 5rem 4.8rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.02);
+    transition: all 0.8s;
+}
+.footer-social-list li a:hover {
+	color:#f9da4f;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.footer-info {
+    padding-top: 6.6rem;
+    padding-bottom: 6rem;
+}
+.col-four {
+    width: 33.33333%;
+    padding: 0 20px;
+    float: left;
+}
+.footer-info h4 {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    line-height: 1.667;
+}
+.footer-info .footer-link-list {
+    margin: 0 0 3rem 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-info a, .footer-info a:visited {
+    color: #292c35;
+}
+/*---------------------footer部分结束---------------------*/
+
+/*---------------------go-top部分开始---------------------*/
+#go-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 800;
+    display: none;
+}
+
+#go-top a {
+    text-decoration: none;
+    border: none;
+    display: block;
+    width: 6rem;
+    height: 6.6rem;
+    line-height: 6.6rem;
+    text-align: center;
+    background: #000000;
+    color: #FFFFFF;
+}
+/*---------------------go-top部分结束---------------------*/
+
+
+
+
+
+/*---------------主题动画开始---------------*/
+#feature [data-animate*='fadeInUp'] {
+	transform: translateY(50%);
+	opacity: 0;
+	transition: all 1.5s;
+}
+#feature [class*='fadeInUp'] {
+	opacity: 1;
+	transform: translateY(0);
+}
+#infos [data-animate*='fadeInLeft'] {
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: all 0.8s;
+}
+#infos [class*='fadeInLeft'] {
+	opacity: 1;
+	transform: translateX(0);
+}
+#infos [data-animate*='fadeInRight'] {
+	opacity: 0;
+	transform: translateX(100%);
+	transition: all 0.8s;
+}
+#infos [class*='fadeInRight'] {
+	opacity: 1;
+	transform: translateX(0);
+}
+#testimonials [data-animate*='fadeInUp'] {
+	transform: translateY(50%);
+	opacity: 0;
+	transition: all 1s;
+}
+#testimonials [class*='fadeInUp'] {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+#pricing [data-animate*='fadeInUp'] {
+	transform: translateY(30%);
+	opacity: 0;
+	transition: all 1s;
+}
+#pricing [class*='fadeInUp'] {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+#download [data-animate*='fadeInUp'] {
+	transform: translateY(100%);
+	opacity: 0;
+	transition: all 1s;
+}
+#download [class*='fadeInUp'] {
+	opacity: 1;
+	transform: translateY(0);
+}
+#subscribe [data-animate*='fadeInUp'] {
+	transform: translateY(100%);
+	opacity: 0;
+	transition: all 1s;
+}
+#subscribe [class*='fadeInUp'] {
+	opacity: 1;
+	transform: translateY(0);
+}
+#subscribe [data-animate*='fadeInLeft'] {
+	transform: translateX(-100%);
+	opacity: 0;
+	transition: all 1s;
+}
+#subscribe [class*='fadeInLeft'] {
+	opacity: 1;
+	transform: translateY(0);
+}
+#subscribe [data-animate*='fadeInRight'] {
+	transform: translateX(100%);
+	opacity: 0;
+	transition: all 1s;
+}
+#subscribe [class*='fadeInRight'] {
+	opacity: 1;
+	transform: translateY(0);
+}
+/*---------------主题动画结束---------------*/
